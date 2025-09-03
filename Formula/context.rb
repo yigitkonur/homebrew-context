@@ -3,8 +3,8 @@ class Context < Formula
 
   desc "A CLI tool to copy project context to the clipboard for LLMs"
   homepage "https://github.com/yigitkonur/code-to-clipboard-for-llms"
-  url "https://github.com/yigitkonur/code-to-clipboard-for-llms/archive/refs/tags/v2.2.0.tar.gz"
-  sha256 "878afd54bee7ffc3331f9ba9a864678c2c4f5bec7625c23785e635374f51261a"
+  url "https://github.com/yigitkonur/code-to-clipboard-for-llms/archive/refs/tags/v2.2.3.tar.gz"
+  sha256 "1d1d7c71c5db87ca968705f1519247d25ff5749aa05b199d4f661ac87fef2e79"
   license "MIT"
 
   depends_on "python@3.11"
