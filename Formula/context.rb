@@ -2,14 +2,14 @@ class Context < Formula
   desc "A CLI tool to copy project context to the clipboard for LLMs"
   homepage "https://github.com/yigitkonur/code-to-clipboard-for-llms"
   url "https://github.com/yigitkonur/code-to-clipboard-for-llms/archive/refs/tags/v2.2.0.tar.gz"
-  sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  sha256 "878afd54bee7ffc3331f9ba9a864678c2c4f5bec7625c23785e635374f51261a"
   license "MIT"
 
   depends_on "python@3.11"
 
   resource "gitignore-parser" do
-    url "https://files.pythonhosted.org/packages/b5/d2/a6b57950b7a8d38ab9a8fa855c82662030f316270b21e42f6e9b462f43a9/gitignore_parser-0.1.12.tar.gz"
-    sha256 "93a8e9117017cac9b819eb28f40ba02e6cd18eb5fa0f06de2c8f4141e4e592c5"
+    url "https://files.pythonhosted.org/packages/e5/51/e391a1a4238f18d0abb47be479b07af265ad4519022cf51b7da47ef82487/gitignore_parser-0.1.13.tar.gz"
+    sha256 "c7e10c8190accb8ae57fb3711889e73a9c0dbc04d4222b91ace8a4bf64d2f746"
   end
 
   resource "pyperclip" do
