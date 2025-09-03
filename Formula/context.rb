@@ -1,4 +1,6 @@
 class Context < Formula
+  include Language::Python::Virtualenv
+
   desc "A CLI tool to copy project context to the clipboard for LLMs"
   homepage "https://github.com/yigitkonur/code-to-clipboard-for-llms"
   url "https://github.com/yigitkonur/code-to-clipboard-for-llms/archive/refs/tags/v2.2.0.tar.gz"
@@ -18,21 +20,7 @@ class Context < Formula
   end
 
   def install
-    # Create a dedicated virtual environment
-    venv = virtualenv_create(libexec, "python3.11")
-
-    # Install Python dependencies (resources) into the venv
-    venv.pip_install resources
-
-    # Install the main application from the source
-    venv.pip_install_and_link buildpath
-
-    # Create the executable wrapper script
-    (bin/"context").write <<~EOS
-      #!/bin/bash
-      # Wrapper script that calls the Python script in its isolated environment
-      exec "#{libexec}/bin/context" "$@"
-    EOS
+    virtualenv_install_with_resources
   end
 
   test do
